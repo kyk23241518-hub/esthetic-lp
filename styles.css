@@ -1,0 +1,188 @@
+:root {
+  --green: #6fc9bf;
+  --green-dark: #2a8f84;
+  --white: #ffffff;
+  --ink: #1f2a2d;
+  --bg: #f5fbfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--bg), #e0f4f1);
+  padding: 72px 0;
+}
+
+.hero__inner {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+.brand {
+  letter-spacing: 0.08em;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.2;
+  margin: 0.2em 0;
+}
+
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+}
+
+.image-placeholder {
+  border: 2px dashed var(--green-dark);
+  border-radius: 18px;
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  color: var(--green-dark);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin: 0 0 1.4rem;
+}
+
+.features {
+  background: var(--white);
+}
+
+.cards {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: #e8f7f4;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--green-dark);
+  font-size: 1.8rem;
+}
+
+.concerns {
+  background: var(--bg);
+}
+
+.check-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.check-list li {
+  background: var(--white);
+  border-left: 6px solid var(--green-dark);
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+
+.stats {
+  display: grid;
+  gap: 14px;
+}
+
+.stat {
+  background: #edf9f7;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.stat__label {
+  margin: 0;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.stat__value {
+  margin: 4px 0 0;
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  font-weight: 700;
+}
+
+.cta {
+  background: linear-gradient(160deg, var(--green), #9de2da);
+  color: #083630;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 22px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn--primary {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.75);
+  color: #0a4038;
+}
+
+.footer {
+  background: #10201e;
+  color: #b6d0cc;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
